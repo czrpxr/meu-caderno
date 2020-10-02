@@ -1,17 +1,16 @@
 <link rel="stylesheet" href="css/style.css">
 
-## Programação de Baixo Nível (Assembly)
+# 1. Binários e Hexadecimais
 
 O conteúdo é baseado na arquitetura intel x86 32-bits
 
-### Conteúdo:
 
-[Binários e Hexadecimais](#1. Binários e Hexadecimais)
+
+#### Próximo: [Bit, Nibble, Byte, Word, Double Word](./estruturas.md)
 
 ---
 
-# 1. Binários e Hexadecimais
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+## Binários  
 * Sistema decimal:
 
 No cotidiano utilizamos o sistema decimal (base dez) para representar grandezas. O número 1234 pode ser descrito das seguintes formas:
@@ -49,3 +48,37 @@ Como foi observado no exemplo anterior, a conversão de binário para decimal é
     - 2¹ (2) é menor que 3. Subtraímos 3-2 (= 1) e incluímos "1";  
     - 2⁰ (1) é igual ao resultado anterior. A sequencia de subtrações agora chega ao fim com 1-1 (= 0) e incluíndo o "1" final;  
     - Resultado final **10101001111**.
+
+---
+
+## Hexadecimais  
+
+O sistema binário facilita a representação numérica pois utilizamos apenas dois símbolos para representar qualquer número podendo assim utilizar dois estados (ou níveis de voltagem) de um transitor, por exemplo. Porém cria outro problema: como no exemplo anterior para representar 1359 (4 digitos) acabamos utilizando 10101001111 (11 dígitos) o que dificulta nosso entendimento quando precisamos trabalhar com números grandes. Além disso as conversões entre binários e decimais são trabalhosas.  
+O sistema hexadecimal (base 16) nos ajuda com estes problemas. É compacto e sua conversão para binário (e vice-versa) relativamente simples. Assim como o sistema decimal é baseado em 10 dígitos (0-9) e o binário em 2 (0 e 1) o hexadecimal utiliza 16 dígitos, que são (0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F). Ou seja, para convertermos o número 1234 hexadecimal para decimal, faríamos:
+
+<img class="center" src="https://latex.codecogs.com/gif.latex?1&space;*&space;16^{3}&space;&plus;&space;2&space;*&space;16^{2}&space;&plus;&space;3&space;*&space;16^{1}&space;&plus;&space;4&space;*&space;16^{0}" title="1 * 16^{3} + 2 * 16^{2} + 3 * 16^{1} + 4 * 16^{0}" />
+
+E para converter de hexadecimal para binário?    
+  
+|Binário|Hexadecimal|
+|:---:|:---:|
+|0000|0|
+|0001|1|
+|0010|2|
+|0011|3|
+|0100|4|
+|0101|5|
+|0110|6|
+|0111|7|
+|1000|8|
+|1001|9|
+|1010|A|
+|1011|B|
+|1100|C|
+|1101|D|
+|1110|E|
+|1111|F|
+
+
+
+
