@@ -56,7 +56,7 @@ Como foi observado no exemplo anterior, a conversão de binário para decimal é
 O sistema binário facilita a representação numérica pois utilizamos apenas dois símbolos para representar qualquer número podendo assim utilizar dois estados (ou níveis de voltagem) de um transitor, por exemplo. Porém cria outro problema: como no exemplo anterior para representar 1359 (4 digitos) acabamos utilizando 10101001111 (11 dígitos) o que dificulta nosso entendimento quando precisamos trabalhar com números grandes. Além disso as conversões entre binários e decimais são trabalhosas.  
 O sistema hexadecimal (base 16) nos ajuda com estes problemas. É compacto e sua conversão para binário (e vice-versa) relativamente simples. Assim como o sistema decimal é baseado em 10 dígitos (0-9) e o binário em 2 (0 e 1) o hexadecimal utiliza 16 dígitos, que são (0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F). Ou seja, para convertermos o número 1234 hexadecimal para decimal, faríamos:
 
-<img class="center" src="https://latex.codecogs.com/gif.latex?1&space;*&space;16^{3}&space;&plus;&space;2&space;*&space;16^{2}&space;&plus;&space;3&space;*&space;16^{1}&space;&plus;&space;4&space;*&space;16^{0}" title="1 * 16^{3} + 2 * 16^{2} + 3 * 16^{1} + 4 * 16^{0}" />
+<img src="https://latex.codecogs.com/gif.latex?1&space;*&space;16^{3}&space;&plus;&space;2&space;*&space;16^{2}&space;&plus;&space;3&space;*&space;16^{1}&space;&plus;&space;4&space;*&space;16^{0}" title="1 * 16^{3} + 2 * 16^{2} + 3 * 16^{1} + 4 * 16^{0}" />
 
 E para converter de hexadecimal para binário?    
   
