@@ -79,6 +79,10 @@ E para converter de hexadecimal para binário?
 |1110|E|
 |1111|F|
 
+Aqui temos uma tabela com todos os dígitos hexadecimais e suas equivalencias em binário. Esta tabela é o suficiente para realizar a conversão, pois basta realizar as devidas substituições. Por exemplo:
 
+0BEEFh = 0000 1011 1110 1110 1111b
+
+(OBS: o "h" no fim do número hexadecimal assim como o "b" servem apenas para identificar a base que está sendo utilizada como referências. Também constuma-se encontrar "d" para representação da base decimal)
 
 
