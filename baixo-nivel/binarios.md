@@ -1,10 +1,3 @@
----
-
-title: Binários e Hexadecimais
-creator: Cezar Peixeiro
-language: Brazilian Portuguese
-
----
 <link rel="stylesheet" href="css/style.css">
 
 ## Programação de Baixo Nível (Assembly)
@@ -15,13 +8,10 @@ O conteúdo é baseado na arquitetura intel x86 32-bits
 
 [Binários e Hexadecimais](#1. Binários e Hexadecimais)
 
-
-
-
 ---
 
 # 1. Binários e Hexadecimais
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 * Sistema decimal:
 
 No cotidiano utilizamos o sistema decimal (base dez) para representar grandezas. O número 1234 pode ser descrito das seguintes formas:
@@ -41,3 +31,21 @@ Tomando como exemplo o número 1111011, temos:
 <img class="center" src="https://latex.codecogs.com/gif.latex?=&space;123_{10}" title="= 123_{10}" />
 
 (OBS: o número 10 na parte inferior do resultado mostra que ele está escrito na base 10)
+
+* Conversão entre decimal e binário:
+
+Como foi observado no exemplo anterior, a conversão de binário para decimal é simples. Para realizar a operação inversa (de decimal para binário) não há grande dificuldade, porém não é tão intuitivo. Pode ser seguido o seguinte raciocício:
+
+    - Objetivo: converter o número 1359;  
+    - 2¹⁰ = 1024 é a maior potência de dois menor que 1359. Sendo assim, subtraímos 1024 de 1359 (1359 - 1024 = 335) e colocamos "1" no início do nosso número;  
+    - Começamos então a descer nas potências de 2 a partir de 2¹⁰. 2⁹ = 512 e é maior que o resultado da subtração anterior (335), então colocamos um "0" depois do nosso "1", ficando com **10**;  
+    - No caso de 2⁸ temos 256 que é menor que 335. Então, realizamos a subtração 335-256 (=79) e acrescentamos "1" no nosso número. Ele fica até o momento **101**;  
+    - Para 2⁷ (128) é maior que 79, portanto colocamos "0". Nosso resultado parcial fica **1010**;  
+    - 2⁶ (64) é menor que 79. Então realizamos a subtração 79-64 (= 15) e adicionamos 1 ao número **10101**;  
+    - 2⁵ (32) é maior que 15, portanto incluímos "0";  
+    - 2⁴ (16) também é maior que 15 e também incluímos "0". Nosso resultado parcial é **1010100**;  
+    - 2³ (8) é menor que 15. Então realizamos a subtração 15-8 (= 7) e incluímos "1";  
+    - 2² (4) é menor que 7. Subtraímos 7-4 (= 3) e incluímos "1". Parcial agora de **101010011**;  
+    - 2¹ (2) é menor que 3. Subtraímos 3-2 (= 1) e incluímos "1";  
+    - 2⁰ (1) é igual ao resultado anterior. A sequencia de subtrações agora chega ao fim com 1-1 (= 0) e incluíndo o "1" final;  
+    - Resultado final **10101001111**.
