@@ -17,7 +17,8 @@ _(Nota: A peixeiro's license diz que você tem a permissão de fazer tudo acima 
 Aqui voce encontra todos os assuntos e pode ir direto até eles através dos links.
 
 **- Programação de Baixo Nível**  
-		[1. Binários e Hexadecimais](./baixo-nivel/binarios.md)
+[1. Binários e Hexadecimais](./baixo-nivel/binarios.md)  
+    [1.1 Bit, Nibble, Byte e Word](./baixo-nivel/estruturas.md)
 
 **- Geometria Analítics e álgebra Linear**
 
