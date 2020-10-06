@@ -5,6 +5,7 @@
 
 
 #### Anterior: [1.Binários e Hexadecimais](./binarios.md)
+#### Próximo: [1.2 Operações Lógicas](./operacoes_logicas.md)
 
 ---
 
