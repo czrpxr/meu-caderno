@@ -26,7 +26,13 @@ Como um Byte possui 8 dígitos podemos concluir que temos 2 elevado à 8 possibi
 
 ## Word:
 
-Uma word (palavra) é um conjunto de 16 bits, ou seja, dois bytes:  
+Uma word (palavra) é um conjunto de 16 bits, ou seja, dois bytes também classificados como ordem alta e baixa:
 
 
 ![](./imgs/byte02.png)
+
+Como cada Byte são dois Nibbles sabemos então que é formado por 4 nibbles dispostos e definidos da seguinte forma:
+
+![](./imgs/byte03.png)
+
+Com uma Word conseguimos representar 65536 valores diferentes (2 elevado à 16). Em alguns casos também é utilizado o Double Word que é uma Word com 32 bits. Neste caso, segue-se o mesmo padrão de nomenclaturas da Word, porém considerando 4 bytes, e 8 nibbles.
