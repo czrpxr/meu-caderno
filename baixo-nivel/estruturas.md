@@ -17,3 +17,16 @@ O Nibble é um conjunto de quatro bits. O Nibble é importante porque como pudem
 ## Byte:  
 Um byte é composto de 8 bits. É de longe a estrutura binária mais conhecida e geralmente o menor item que pode ser acessado individualmente (quando falamos de microprocessadores e microcontroladores, por exemplo). Até podemos manipular bits individualmente, porém devemos utilizar operações que "mascaram" os bits que não queremos alterar em um byte.  
 Outra coisa que podemos observar é que um Byte é composto de dois Nibbles.
+
+![](./imgs/byte01.png)
+
+Numerando-os da direita para esquerda, o nibble com os índices de menor valor é chamado de *Nibble de Ordem Baixa* e o nibble com os índices maiores de *Nibble de Ordem Alta*.  
+
+Como um Byte possui 8 dígitos podemos concluir que temos 2 elevado à 8 possibilidades de combinações, ou seja, podemos representar 256 valores com um byte. Geralmente definidos de 0 à 255.
+
+## Word:
+
+Uma word (palavra) é um conjunto de 16 bits, ou seja, dois bytes:  
+
+
+![](./imgs/byte02.png)
