@@ -20,7 +20,7 @@ Aqui voce encontra todos os assuntos e pode ir direto até eles através dos lin
 [1. Binários e Hexadecimais](./baixo-nivel/binarios.md)  
     [1.1 Bit, Nibble, Byte e Word](./baixo-nivel/estruturas.md)
 
-**- Geometria Analítics e álgebra Linear**
+**- Geometria Analítica e álgebra Linear**
 
 
 **- Probabilidade e Estatística**

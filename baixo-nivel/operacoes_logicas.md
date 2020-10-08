@@ -44,3 +44,30 @@ Na operação NOT ("não" ou "negação") quando um valor é inserido, a saída 
 |NOT|0|1|
 |:---:|:---:|:---:|
 ||1|0|
+
+## Operações Lógicas com Bits e Bit Strings
+
+Os operadores lógicos operam apenas com bits individuais. Mas se estamos falando de bytes, nibbles e words, como lidar com isso?  
+As operações com estes conjuntos de dados serão realizadas bit a bit, sendo assim, alguns cuidados a serem tomados serão mostrados em seguida.  
+
+Quando temos valores representados por conjuntos de bits e queremos modificar algum deles em específico, operações como AND e OR nos ajudam a forçar algum bit para 0 ou 1 e a operação XOR a inverter valores.  
+
+*Exemplo:*  
+Suponha que temos o número X de dois bytes (8 bits) e queremos garantir que todos os bits de 4 à 7 (byte de ordem alta) tenham valor 0. Podemos então realizar uma operação AND deste número X com o número 0000 1111. Abaixo vemos duas situações exemplificadas.  
+
+<br />
+
+|valor teste|0|1|0|1|0|1|0|1|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|valor 'mascara'|0|0|0|0|1|1|1|1|
+|resultado AND|0|0|0|0|0|1|0|1|  
+
+<br />  
+
+|valor teste|1|1|0|1|1|1|0|1|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|valor 'mascara'|0|0|0|0|1|1|1|1|
+|resultado AND|0|0|0|0|1|1|0|1|
+
+Como podemos observar, os bits de 0 à 3 permaneceram inalterados, enquanto os de 4 à 7, como desejá-vamos, foram alterados para 0. Usando agora como exemplo um número de 2 bytes em que queremos que os byte de ordem baixa sejam alterados para 1, podemos utilizar o operador OR para realizar a operação (utilizando os mesmos valores de teste):  
+
