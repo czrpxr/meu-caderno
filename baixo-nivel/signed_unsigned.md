@@ -7,12 +7,14 @@
 #### Anterior: [1.2 Operações Lógicas](./operacoes_logicas.md)
 #### Próximo: [1.4]()
 
+OBS: nesta área, quando falo de **números naturais** para tratar os números sem sinais e **números inteiros** para tratar números que podem ser tanto positivos quanto negativos (com sinais). 
+
 ---
 
-O conceitos de números binários foi introduzido apenas tratando de números positivos. Por exemplo, para o número 1 decimal utilizamos 0001, para o 2 o 0010 e assim por diante. Mas e quando temos que representar números tanto positivos quanto negativos? O que fazemos?  
+O conceitos de números binários foi introduzido apenas tratando de números naturais. Por exemplo, para o número 1 na base decimal utilizamos 0001, para o 2 o 0010 e assim por diante. Mas e quando temos que representar números tanto positivos quanto negativos (inteiros)? O que fazemos?  
 
-Primeiramente temos que ter em mente que será um número finito e fixo de valores. Utilizando 1 byte como exemplo, neste caso podemos representar apenas 256 valores no total (2 elevado à 8). Ou seja, vamos ter que utilizar metade desses valores para representar números negativos *0 - 127* e *128-255*. Mas como fazer isso?  
-Uma regra muito comum é que o bit de de maior ordem seja um bit de sinal. Quando o número possui o bit de maior ordem é zero ele é positivo, quando 1 ele é negativo. No caso de 1 byte (8 bits) podemos representar então de -128 até -1 e de 0 até 127.
+Primeiramente temos que ter em mente que será um número finito e fixo de valores. Utilizando 1 byte como exemplo, neste caso podemos representar apenas 256 valores no total (2 elevado à 8). Ou seja, vamos ter que utilizar metade desses valores para representar números positivos (*0 - 127*) e a outra metade para os negativos (*128-255*). Mas como fazer isso?  
+Uma regra muito comum é que o bit de maior ordem seja um bit de sinal. Quando o número possui o bit de maior ordem zero ele é positivo, quando 1 ele é negativo. No caso de 1 byte (8 bits) podemos representar então de -128 até -1 e de 0 até 127.
 
 *Exemplos com 16-bits:*
 
@@ -47,7 +49,7 @@ Utilizando este padrão para definir números negativos e positivos, podemos fac
 |1110|14
 |1111|15
 
-Estas são as representações binárias quando os números não possuem sinal. Quando divididos em positivos e negativos, temos então de as variações de 0-7 para representar os números positivos e de 8-15 para os números negativos. Teremos então:  
+Estas são as representações binárias quando os números tratamos apenas dos números naturais. Quando divididos em positivos e negativos, temos então as variações de 0-7 para representar os números positivos e de 8-15 para os números negativos. Teremos então:  
 
 |Binário|Decimal
 |:---:|:---:|
@@ -71,7 +73,7 @@ Estas são as representações binárias quando os números não possuem sinal. 
 Perceba que os números negativos possuem **sentido contrário** aos positivos.  
 Podemos perceber um padrão então para converter os números de positivos para negativos e vice-versa?  
 
-Para este procedimento, pegamos o número binário, realizamos uma operação NOT (invertendo todos os bits) e adicionamos 1.
+Para este procedimento pegamos o número binário, realizamos uma operação NOT (invertendo todos os bits) e adicionamos 1.
 
 Exemplo com o número 3:
 
@@ -95,7 +97,7 @@ Além disso, pode verificar que fazendo o caminho inverso, o resultado também s
 
 ## Mas por que utilizar esse sistema?  
 Você deve estar se perguntando "mas não podemos só utilizar o bit de alta ordem para sinalizar o sinal e seguir numerando na sequencia? Por exemplo 0001 ser o 1 e o 1001 ser -1?  
-A resposta é que o método complementar utilizado acima facilita as operações matemáticas para o hardware. Explicando melhor: temos um sistema que opera com 1 byte (8 bits) e queremos realizar a operação 1 + (-1) que obviamente resultará zero, como acontecerá essa operação?  
+A resposta é que o método complementar utilizado facilita as operações matemáticas para o hardware. Explicando melhor: temos um sistema que opera com 1 byte (8 bits) e queremos realizar a operação 1 + (-1) que obviamente resultará zero, como acontecerá essa operação?  
 
 |Soma|
 |---:|
@@ -106,3 +108,9 @@ A resposta é que o método complementar utilizado acima facilita as operações
 Como pode-se ver, ao realizar esta soma temos um bit sobrando, porém em nosso sistema estamos restritos a números representados por 1 byte, ou seja, este bit será ignorado e o resultado da operação será 0000 0000 (resultado esperado).  
 
 Lembrando que em desenvolvimentos futuros, deve-se prestar atenção ao tipo de dado que se quer representar, pois um número binário poderá representar um número não assinalado (natural), um número sinalado (inteiro) ou um caractere.
+
+## Como converter números com ou sem sinais entre 8, 16 e 32 bits?  
+
+Algumas vezes podemos ter a necessidade de converter números de 16 para 32 bits, ou de 16 para 8 bits, entre outras combinações, devido à compatibilidade entre sistemas. Para estas situações temos alguns padrões a seguir que facilitam o trabalho:
+
+*- Converter um número para quantidade maior de bits (*
