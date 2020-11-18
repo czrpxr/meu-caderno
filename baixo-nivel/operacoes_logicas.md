@@ -69,5 +69,5 @@ Suponha que temos o número X de dois bytes (8 bits) e queremos garantir que tod
 |valor 'mascara'|0|0|0|0|1|1|1|1|
 |resultado AND|0|0|0|0|1|1|0|1|
 
-Como podemos observar, os bits de 0 à 3 permaneceram inalterados, enquanto os de 4 à 7, como desejá-vamos, foram alterados para 0. Usando agora como exemplo um número de 2 bytes em que queremos que os byte de ordem baixa sejam alterados para 1, podemos utilizar o operador OR para realizar a operação (utilizando os mesmos valores de teste):  
+Como podemos observar, os bits de 0 à 3 permaneceram inalterados, enquanto os de 4 à 7, como desejavamos, foram alterados para 0. Usando agora como exemplo um número de 2 bytes em que queremos que os byte de ordem baixa sejam alterados para 1, podemos utilizar o operador OR para realizar a operação (utilizando os mesmos valores de teste):  
 
