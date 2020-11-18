@@ -5,13 +5,13 @@
 
 
 #### Anterior: [1.2 Operações Lógicas](./operacoes_logicas.md)
-#### Próximo: [1.4]()
+#### Próximo: [1.4 Shift (deslicamento) e Rotação](./shift_rotacao.md)
 
-OBS: nesta área, quando falo de **números naturais** para tratar os números sem sinais e **números inteiros** para tratar números que podem ser tanto positivos quanto negativos (com sinais). 
+OBS: nesta área, falo de **números naturais** para tratar os números sem sinais e **números inteiros** para tratar números que podem ser tanto positivos quanto negativos (com sinais). 
 
 ---
 
-O conceitos de números binários foi introduzido apenas tratando de números naturais. Por exemplo, para o número 1 na base decimal utilizamos 0001, para o 2 o 0010 e assim por diante. Mas e quando temos que representar números tanto positivos quanto negativos (inteiros)? O que fazemos?  
+O conceito de números binários foi introduzido apenas tratando de números naturais. Por exemplo, para o número 1 na base decimal utilizamos 0001, para o 2 o 0010 e assim por diante. Mas e quando temos que representar números tanto positivos quanto negativos (inteiros)? O que fazemos?  
 
 Primeiramente temos que ter em mente que será um número finito e fixo de valores. Utilizando 1 byte como exemplo, neste caso podemos representar apenas 256 valores no total (2 elevado à 8). Ou seja, vamos ter que utilizar metade desses valores para representar números positivos (*0 - 127*) e a outra metade para os negativos (*128-255*). Mas como fazer isso?  
 Uma regra muito comum é que o bit de maior ordem seja um bit de sinal. Quando o número possui o bit de maior ordem zero ele é positivo, quando 1 ele é negativo. No caso de 1 byte (8 bits) podemos representar então de -128 até -1 e de 0 até 127.
@@ -113,4 +113,20 @@ Lembrando que em desenvolvimentos futuros, deve-se prestar atenção ao tipo de 
 
 Algumas vezes podemos ter a necessidade de converter números de 16 para 32 bits, ou de 16 para 8 bits, entre outras combinações, devido à compatibilidade entre sistemas. Para estas situações temos alguns padrões a seguir que facilitam o trabalho:
 
-*- Converter um número para quantidade maior de bits (*
+**- Converter um número para quantidade maior de bits (números sem sinal)**  
+Neste caso podemos simplesmente completar os bits a mais com zeros. Com isso, nada será alterado no valor. Exemplo:  
+
+|Binário 8 bits|Decimal| Binário 16 bits
+|:---:|:---:|:---:|
+|0000 0101|5|0000 0000 0000 0101
+
+**- Converter um número para quantidade maior de bits (números com sinal)**  
+Simplementes completamos os bits a mais com os mesmos valores do  bit de mais alta ordem. Exemplos:  
+
+|Binário 8 bits|Decimal| Binário 16 bits
+|:---:|:---:|:---:|
+|0100 0000|+64|0000 0000 0100 0000
+|1100 0000|-64|1111 1111 1100 0000
+
+**- Converter um número para quantidade menor de bits (números com sinal)**  
+Assim como nos casos anteriores, para contrair um número devemos observar os bits de alta ordem que serão removidos. Para que esta conversão seja bem sucedida os bits a ser removidos devem ser TODOS IGUAIS. Se apenas um deles for diferente a conversão será um fracasso, pois a resultante não será o mesmo valor. Além disso, deve-se atentar para que o bit de alta ordem dos bits restantes também seja IGUAL aos bits removidos para manutenção da integridade.
