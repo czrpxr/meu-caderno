@@ -2,7 +2,7 @@
 
 # 2. Algebra Booleana
 
-#### Próximo: [2.1 Tabelas da Verdade e Funções Booleanas](./tabelaverdade_funcoes.md)  
+#### Próximo: [2.1 Tabela Verdade e Funções Booleanas](./tabelaverdade_funcoes.md)  
 ---
 
 A lógica da álgebra booleana é a base da computação. Qualquer algoritmo ou circuito eletrônico pode ser representado utlizando equações booleanas. São operações que acontece muito mais próximas da camada de hardware, mas são essenciais para entender a fundo o comportamento de sistemas de computação.  
