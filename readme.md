@@ -22,6 +22,7 @@ Aqui voce encontra todos os assuntos e pode ir direto até eles através dos lin
     1.1 [Bit, Nibble, Byte e Word](./baixo-nivel/estruturas.md)  
     1.2 [Operações Lógicas](./baixo-nivel/operacoes_logicas.md)  
     1.3 [Sobre os Números Positivos e Negativos](./baixo-nivel/signed_unsigned.md)  
+    1.4 [Shift (deslocamento) e Rotação](./baixo-nivel/shift_rotacao.md)  
 
 
 **- Geometria Analítica e álgebra Linear**
