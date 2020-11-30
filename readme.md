@@ -25,6 +25,7 @@ Aqui voce encontra todos os assuntos e pode ir direto até eles através dos lin
     1.4 [Shift (deslocamento) e Rotação](./baixo-nivel/shift_rotacao.md)  
 2. [Algebra Booleana](./baixo-nivel/algebra_booleana_intro.md)
 3. [Organização de um Sistema x86](./baixo-nivel/sistemax86.md)
+    3.1 [Os Barramentos](./baixo-nivel/barramentos.md)
 
 **- Geometria Analítica e álgebra Linear**
 
