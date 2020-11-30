@@ -18,6 +18,8 @@ Aqui voce encontra todos os assuntos e pode ir direto até eles através dos lin
 
 **- Programação de Baixo Nível**  
 
+**obs: todo conteúdo a partir daqui é baseado no livro The Art of Assembly Language - 1st Edition**
+
 1. [Binários e Hexadecimais](./baixo-nivel/binarios.md)  
     1.1 [Bit, Nibble, Byte e Word](./baixo-nivel/estruturas.md)  
     1.2 [Operações Lógicas](./baixo-nivel/operacoes_logicas.md)  
@@ -26,6 +28,9 @@ Aqui voce encontra todos os assuntos e pode ir direto até eles através dos lin
 2. [Algebra Booleana](./baixo-nivel/algebra_booleana_intro.md)  
 3. [Organização de um Sistema x86](./baixo-nivel/sistemax86.md)  
     3.1 [Os Barramentos](./baixo-nivel/barramentos.md)  
+    3.2 [A Memória](./baixo-nivel/a_memoria.md)  
+    3.3 [Entradas e Saídas](./baixo-nivel/entradas_saidas.md)  
+    3.4 [O Clock](./baixo-nivel/clock.md)  
 
 **- Geometria Analítica e álgebra Linear**
 
