@@ -2,8 +2,8 @@
 # 3.2 A Memória
 
 
-#### Próximo: [3.3. Entradas e Saídas](./entradas_saidas.md)  
-#### Anterior: [3 Organização de um sistema x86](./sistemax86.md)  
+#### Próximo: [3.3 Entradas e Saídas](./entradas_saidas.md)  
+#### Anterior: [3.1 Os Barramentos](./barramentos.md)  
 
 Um processador 80x86 endereça no máximo 2 elevado a n diferentes localizações. com _n_ sendo o número de bits do barramento de endereço. A unidade mais básica de memória é um byte. Portanto, com 20, 24 e 32 linhas de endereços, o processador 80x86 pode endereçar 1Mb, 16 Mb e 4Gb de memória respectivamente.  
 O que acontece então quando o processador acessa uma palavra binária ou palavra binária dupla. Se a memória é um array de bytes, como podemos lidar com valores maiores que 8 bytes?  

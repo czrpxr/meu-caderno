@@ -1,7 +1,7 @@
 
 # 3.4 O Clock  
 
-#### Próximo: [3.4 O Clock](./clock.md)  
+#### Próximo: [3.5 Estado de Espera](./estado_espera.md)  
 #### Anterior: [3.3 Entradas e Saídas](./entradas_saidas.md)  
 
 ---  
