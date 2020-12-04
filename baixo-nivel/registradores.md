@@ -1,7 +1,7 @@
 
 # 3.7 Registradores
 
-#### Próximo: [3.8 xxx](./xxx.md)  
+#### Próximo: [3.8 Conjunto de operações dos x86](./operacoesx86.md)  
 #### Anterior: [3.6 Memória Cache](./cache.md)  
 
 ---  
@@ -29,4 +29,4 @@ Esta melhoria precisa de oito funções lógicas para decodificar os bits em A, 
 Claro que muitas CPU não são STANDALONE. Por exemplo, o comando _MOVE_ é um comando que move o dado de um local para outro. Sendo assim, a instrução _MOVE_ requer dois operandos: um operador de origem e um de destino.  Alguém que conceba processadores geralmente encapsuestas operações de origem e destino como parte da instrução de máquina. Alguns sockets correspondem ao operando de origem e outros de destino.  
 
 Um dos avanços primários no desenvolvimento de computadores foi o conceito de _programa armazenado_. Um grande problema com a programação no patch panel é que o número de etapas do programa (instruções) é limitado ao número de linhas de sockets disponíveis na máquina. John Von Neumann e outros reconheceram a relação entre o socket no painel e os bits na memória; eles descobriram que poderiam armazenar equivalentes binários de um programa na memória principal e buscar cada programa na memória, carregá-la em um _registro decodificador_ especial que se conectaria diretamente  ao circuito de decodificação de instruções da CPU.  
-O truque, na verdade, era adicionar ainda mais eletrônica a CPU. Esta eletrônica, a unidade de controle, busca códigos de instrução (também conhecidos como operações ou opcodes) de uma memória e move elas para o registrador de instruções de decodificação. A unidade de controçe contem registradores especiais, o ponteiro de instruão que contém o endereço de uma instrução executável.
+O truque, na verdade, era adicionar ainda mais eletrônica a CPU. Esta eletrônica, a unidade de controle, busca códigos de instrução (também conhecidos como código de operação ou opcodes) de uma memória e move elas para o registrador de instruções de decodificação. A unidade de controle contém um registrador especial, o _ponteiro de instrução_ que contém o endereço de uma instrução executável. A unidade de controle busca este código de instrução na memória e move para o registrador de decodificação para execução. Após a execução da instrução, a unidade de controle incrementa o ponteiro de instrução, busca a próxima instrução na memória e assim sucessivamente.  

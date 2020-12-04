@@ -34,7 +34,8 @@ Aqui voce encontra todos os assuntos e pode ir direto até eles através dos lin
     3.5 [Estado de Espera](./baixo-nivel/estado_espera.md)  
     3.6 [Memória Cache](./baixo-nivel/cache.md)  
     3.7 [Registradores](./baixo-nivel/registradores.md)  
-    3.8 []()
+    3.8 [Conjunto de Operações dos x86](./baixo-nivel/operacoesx86.md)  
+    
 **- Geometria Analítica e álgebra Linear**
 
 
