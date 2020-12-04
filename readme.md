@@ -31,8 +31,10 @@ Aqui voce encontra todos os assuntos e pode ir direto até eles através dos lin
     3.2 [A Memória](./baixo-nivel/a_memoria.md)  
     3.3 [Entradas e Saídas](./baixo-nivel/entradas_saidas.md)  
     3.4 [O Clock](./baixo-nivel/clock.md)  
-    3.5 [Estado de Espera](./baixo-nivel/estado_espera.md)
-
+    3.5 [Estado de Espera](./baixo-nivel/estado_espera.md)  
+    3.6 [Memória Cache](./cache.md)  
+    3.7 [Registradores](./registradores.md)
+    3.8 []()
 **- Geometria Analítica e álgebra Linear**
 
 

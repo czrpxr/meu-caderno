@@ -1,7 +1,7 @@
 
 # 3.6 Memória Cache
 
-#### Próximo: [3.7 xxx](./xxx.md)  
+#### Próximo: [3.7 Registradores](./registradores.md)  
 #### Anterior: [3.4 O Estado de Espera](./estado_espera.md)  
 
 ---  
@@ -26,4 +26,10 @@ Ela não é perfeita. Mesmo que o programa passe um tempo considerável executan
 **Cache Hit:** Ocorre quando a CPU acessa a memória e encontra com _sucesso_ o dado no cache.
 **Cache Miss:** Ocorre quando a CPU acessa a memória e o dado não está em cache. Neste caso a CPU deve ler o dado da memória principal, o que leva a uma perda de performance.  para tirar vantagem da localidade de referência, a CPU copia o dado para o cache quando acessa um dado que não está presente nele. Considerando que a CPU irá acessar a mesma localização em breve, o sistema irá economizar alguns estados de espera.  
 
-A memória cache lida com os aspectos temporais do acesso à memória, mas não os espaciais. Armazenando em cache posições de memória _quando acessadas_ não irá melhorar o desempenho da aplicação se você constantemente acessar posições consecutivas, como no caso da localidade de referência espacial.Para resolver este problema a maioria dos sistemas de cache leem alguns bytes consecutivos da memória quando um _Cache Miss_ acontece. O 80486 por exemplo lê 16 bytes a mais em um Cache Miss. Mas porque lê-los em blocos ao invés de apenas quando precisamos deles? A maioria dos chips de memória disponíveis hojepossuem modos especiais que deixam você acessar algumas localizações de memória consecutivas. O cache explora essa capacidade para reduzir a quantidade média de estados de espera para acessar a memória.
+A memória cache lida com os aspectos temporais do acesso à memória, mas não os espaciais. Armazenando em cache posições de memória _quando acessadas_ não irá melhorar o desempenho da aplicação se você constantemente acessar posições consecutivas, como no caso da localidade de referência espacial.Para resolver este problema a maioria dos sistemas de cache leem alguns bytes consecutivos da memória quando um _Cache Miss_ acontece. O 80486 por exemplo lê 16 bytes a mais em um Cache Miss. Mas porque lê-los em blocos ao invés de apenas quando precisamos deles? A maioria dos chips de memória disponíveis hoje possuem modos especiais que deixam você acessar algumas localizações de memória consecutivas. O cache explora essa capacidade para reduzir a quantidade média de estados de espera para acessar a memória.  
+
+Se você escrever um programa que acessa a memória de modo aleatório, utilizar o cache pode eventualmente te deixar lento. Ler 16 bytes em cada Cache Miss é mais custos do que acessar somente alguns bytes na linha correspondente do cache  
+
+---  
+
+Não é surpresa que a proporção de Cache Hits para Miss aumenta com o tamanho (em bytes) do sub sistema de memória cache. Os chips 80486, por exemplo, possuem 8.192 bytes no cache on-chip. A Intel alega conseguir 80-95% de taxa de hits com este cache (significa que 80-95% do tempo a CPU encontra o dado no cache). Isso soa muito impressionante. Mas se você analisar os números com atenção, você irá descobrir que não é _tão_ impressionante. Vamos pegar a situação de 80%. Assim 1 em 5 acessos à memória, na média, não estará no cache. Se você possui um processador de 50MHz e um tempo de acesso a memória de 90ns, 4 em 5 acessos à memória vão precisar de apenas um ciclo de clock (por estarem n cache) e 1/5 irá precisar de 10 estados de espera. Sendo assim, o sistema precisará de 15 ciclos de clock para acessar 5 locais na memória ou 3 ciclos de clock por acesso, na média. Isso é o equivalente a dois estados de espera adicionais para cada acesso à memória. Você ainda acredita que sua máquina ainda roda em zero estados de espera?  
