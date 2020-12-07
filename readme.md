@@ -35,6 +35,7 @@ Aqui voce encontra todos os assuntos e pode ir direto até eles através dos lin
     3.6 [Memória Cache](./baixo-nivel/cache.md)  
     3.7 [Registradores](./baixo-nivel/registradores.md)  
     3.8 [Conjunto de Operações dos x86](./baixo-nivel/operacoesx86.md)  
+    3.9 [Modos de endereçamento](./baixo-nivel/formas_enderecamento.md)  
     
 **- Geometria Analítica e álgebra Linear**
 
