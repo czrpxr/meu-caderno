@@ -1,6 +1,6 @@
 # 3.9 Modos de Endereçamento
 
-#### Próximo: [3.10 xxx](./xxx.md)  
+#### Próximo: [3.10 Encoding do x86](./codificacao_x86.md)  
 #### Anterior: [3.8 Conjunto de Operações dos x86](./operacoesx86.md)  
 
 ---  
